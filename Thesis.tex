@@ -1,0 +1,54 @@
+\documentclass[10pt,a4paper,twoside]{report}
+
+\usepackage{gutthesis}
+\usepackage{tikz}
+\usetikzlibrary{positioning}
+\usetikzlibrary{spy}
+\usepackage{siunitx}
+\usepackage{amsmath}
+
+\usepackage{subfig}
+
+
+
+\author{Michał Miszczyszyn}
+\title{Tytul pracy}
+
+
+
+
+
+\begin{document}
+
+\includepdf{TitlePage.pdf}
+\includepdf{Statement.pdf}
+
+\input{./tex/abstract.tex}
+\input{./tex/streszczenie.tex}
+
+\singlespacing
+\tableofcontents
+\onehalfspacing
+
+\input{./tex/symbols.tex}
+\input{./tex/chapter-1.tex}
+\input{./tex/summary.tex}
+
+\singlespacing
+\bibliography{bibliography}
+\bibliographystyle{IEEEtranN}
+\addcontentsline{toc}{chapter}{Bibliography}
+\listoffigures
+\addcontentsline{toc}{chapter}{List of Figures}
+\listoftables
+\addcontentsline{toc}{chapter}{List of Tables}
+\onehalfspacing
+
+\begin{appendices}
+
+\input{./tex/appendix_A.tex}
+\input{./tex/appendix_B.tex}
+
+\end{appendices}
+
+\end{document}
